@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10;
+    padding: 10;
+    background-color: #f0f0f0;
+    zoom: 1.5; /* 150% zoom (1.0 is the default, so 1.5 is 150%) */
+    transform-origin: top;
+}
+
+
+
+/* Header styles */
+.neon-header {
+    background: linear-gradient(45deg, #ff6b6b, #ffcc6b, #83e130, #03d3e3, #ff6b6b, #ffcc6b, #83e130, #03d3e3, #ff6b6b);
+    background-size: 400% 400%;
+    animation: neon 10s linear infinite, colorChange 60s linear infinite;
+}
+
+@keyframes neon {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-image: linear-gradient(45deg, #ff6b6b, #ffcc6b, #83e130, #03d3e3, #ff6b6b, #ffcc6b, #83e130, #03d3e3, #ff6b6b);
+    }
+    100% {
+        background-image: linear-gradient(45deg, #ff6b6b, #ffcc6b, #83e130, #03d3e3, #ff6b6b, #ffcc6b, #83e130, #03d3e3, #ff6b6b);
+    }
+}
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-content {
+    text-align: left;
+}
+
+/* Modal styles (if needed) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(bg.JPG); /* Replace with your background image */
+    background-size: cover;
+    filter: blur(5px); /* Blur the background image */
+    z-index: -1;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    z-index: 1000;
+}
+
+.modal-content:hover {
+    cursor: pointer;
+}
+
+/* Scroll and hover animations */
+header.scrolled {
+    background-color: #333;
+    transition: background-color 0.3s;
+}
+
+header.hovered {
+    background-color: #ff6600;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+/* Your other CSS styles here */
+
+/* Section styles */
+section {
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+section h2 {
+    color: #007bff;
+}
+
+.job h3 {
+    margin: 0;
+}
+
+/* Footer styles */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+address {
+    font-style: normal;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    text-align: center;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#openWhatsApp {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#sendWhatsApp {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #25d366;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
